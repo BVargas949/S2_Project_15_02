@@ -72,6 +72,7 @@
           <th>First Name<span>*</span></th>
           <th>M.I.</th>
           <th>Account<span>*</span></th>
+          <!-- The pattern attribute was added to fit the ACT keyword requirements. This involved having six digits after ACT. -->
           <td><input type="text" name="accID" id="accID" placeholder="ACTnnnnnn" pattern="ACT+.{6,}" required /></td>
         </tr>
         <tr>
@@ -79,15 +80,19 @@
           <td><input type="text" name="fname" id="fname" required /></td>
           <td><input type="text" name="init" id="init" required /></td>
           <th>Department<span>*</span></th>
+          <!-- The pattern attribute was added to fit the DEPT keyword requirement. This involved having four to six digits after DEPT. -->
           <td><input type="text" name="deptID" id="deptID" pattern="DEPT+.{4,6}" required placeholder="DEPTnnnnnn" />
           </td>
         </tr>
         <tr>
           <th>Social Security Number<span>*</span></th>
-          <td colspan="2"><input type="text" name="ssn" id="ssn" required placeholder="nnn-nn-nnnn" />
+          <!-- The pattern attribute was added to fit the SSN keyword requirements. The requirments involved having three digits, two more digits, and three last digits. All seperated with dashes. -->
+          <td colspan="2"><input type="text" name="ssn" id="ssn" pattern=".{3}-.{2}-.{3}" required
+              placeholder="nnn-nn-nnnn" />
           </td>
           <th>Project<span>*</span></th>
-          <td><input type="text" name="projID" id="projID" pattern="PROJ-[a-z]+{2}-{4}" required
+          <!-- The pattern attribute was added to fit the Project keyword requirements. The keyword needs to start with full cap PrOJ then followed by t lowercase letters and three last digits. All seperated with dashes.  -->
+          <td><input type="text" name="projID" id="projID" pattern="PROJ-[a-z]{2}-.{3}" required
               placeholder="PROJ-xx-ddd" /></td>
         </tr>
       </table>

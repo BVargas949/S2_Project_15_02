@@ -30,6 +30,18 @@
       Formats the value, "val", as U.S. currency.
       
 */
+window.addEventListener("onload", function () {
+      var changingCells = document.getElementsByClassName("sum");
+      for (var i = 0; i < changingCells.length; i++) {
+            changingCells[i].onchange = calcExp;
+      }
+      document.getElementById("submitButton").onclick = validateSummary;
+});
+
+function validateSummary() {
+
+}
+
 
 
 
